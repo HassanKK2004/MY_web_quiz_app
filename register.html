@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Register</title>
+    <script src="register.js"></script>
+</head>
+<body id="registerbody">
+    <div class="container">
+        <div id="register" class="flex-center flex-column">
+            <h1>Register</h1>
+            <form name="registerForm" method="POST" action="register.php" onsubmit="return validateForm()">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+                <input type="text" name="PlayName" placeholder="Your name during the game" required>
+                <input type="email" name="email" placeholder="Email" required>          
+                <input type="password" name="password" placeholder="Password" id="p1" required>
+               <label for="check"><input type="checkbox" onclick="show_pass()" name="check">
+                Show Password</label> 
+                <button type="submit" name="register" class="btn">Register</button>
+                <script src="password.js">
+                   
+                </script>
+            </form>
+            <a href="login.html" class="btn">Back to Login</a>
+
+            <!-- Clearer instructions for password conditions -->
+            <div class="password-conditions">
+                <h2>Password Requirements:</h2>
+                <ul>
+                    <li>Must be between 4 to 20 characters.</li>
+                    <li>Must contain at least one uppercase letter.</li>
+                    <li>Must contain at least one lowercase letter.</li>
+                    <li>Must contain at least one number.</li>
+                    <li>Must contain at least one special character (e.g., @, $, !).</li>
+                    <li>No underscores (_) or dashes (-) allowed.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Login</title>
+</head>
+<body id="loginbody">
+    <div class="container">
+        <div id="login" class="flex-center flex-column">
+            <h1>Login</h1>
+            <form method="POST" action="login.php">
+                <input type="text" name="userID" placeholder="User ID" required>
+                <input type="password" name="password" placeholder="Password" id ="p1" required>
+
+                <label for="check"><input type="checkbox" onclick="show_pass()" name="check">
+                    Show Password</label> 
+                   
+                    <script src="password.js"></script>
+
+                <button type="submit" name="login" class="btn">Login</button>
+                
+            </form>
+            <a href="register.html" class="btn" id="no_form">Don't have an ID? Create One</a>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

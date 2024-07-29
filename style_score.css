@@ -1,0 +1,116 @@
+html {
+  background-color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#score {
+  background-image: url('score.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
+
+h1#high {
+  font-size: 54px;
+  color: #56a5eb;
+  text-align: center;
+}
+
+#score_table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 2px solid #56a5eb;
+}
+
+#score_table th, #score_table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+#score_table th {
+  background-color: rgba(0,0,255);
+  color: white;
+  font-weight: bold;
+}
+
+#score_table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.btn, .btn2 {
+  font-size: 18px;
+  padding: 10px 0;
+  width: 200px;
+  text-align: center;
+  border: 0.1rem solid #56a5eb;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #56a5eb;
+  background-color: white;
+  display: block;
+}
+
+.btn:hover, .btn2:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(86, 165, 235, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-container, .btn-container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+}
+
+.btn-container {
+  bottom: 20px;
+  right: 20px;
+}
+
+.btn-container2 {
+  bottom: 20px;
+  left: 20px;
+}
+
+#Sort_btn_container, #Sort_By_Date, #Sort_By_Score, #Sort_By_Game {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#download_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  h1#high {
+    font-size: 36px;
+  }
+  #score_table {
+    width: 100%;
+  }
+  .btn, .btn2 {
+    width: 150px;
+    font-size: 16px;
+  }
+}

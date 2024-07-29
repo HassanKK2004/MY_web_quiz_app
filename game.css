@@ -1,0 +1,112 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.choice-container {
+  display: flex;
+  margin-bottom: 16px;
+  width: 100%;
+  font-size: 1.2rem;
+  border: 5px solid rgba(86, 165, 235, 0.25);
+  background-color: white;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 5px 6.4px 22.4px 0 rgba(86, 185, 235, 0.5);
+}
+
+.choice-prefix {
+  padding: 20px;
+  background-color: #56a5eb;
+  color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.choice-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.Correct {
+  background-color: green;
+}
+
+.Wrong {
+  background-color: red;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.hud-main-text {
+  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+}
+
+#progressBar {
+  width: 100%;
+  height: 48px;
+  border: 3px solid #56a5eb;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#progressBarFull {
+  height: 100%;
+  background-color: #56a5eb;
+  width: 0%;
+  border-radius: 5px;
+}
+
+#question {
+  background-color: rgba(255,255,255,0.7);
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .choice-container {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    flex-direction: column;
+  }
+  .choice-prefix, .choice-text {
+    padding: 15px;
+  }
+  #progressBar {
+    height: 36px;
+  }
+}
